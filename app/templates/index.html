@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>kubevalonline</title>
+    </head>
+    <body>
+        <div class=container>
+        <!-- <form name="main"> -->
+            <textarea id="code" name="code"></textarea>
+            <div class="validate">
+                <button id="submit" type="submit" >Validate K8s yaml</button>
+                <!-- data-ga="validate" -->
+                <button id="reset" type="reset">Clear</button>
+                <!-- data-ga="clear" -->
+            </div>
+        <!-- </form> -->
+        <section id="result-container" class="shown">
+            <h3>Results</h3>
+        </section>
+        </div>
+    </body>
+    <link rel="stylesheet" href="/static/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="/static/codemirror/addon/lint/lint.css">
+    <link rel="stylesheet" href="/static/codemirror/theme/liquibyte.css">
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <script src="/static/codemirror/lib/codemirror.js"></script>
+    <script src="/static/codemirror/mode/yaml/yaml.js"></script>
+    <script src="/static/js/app.js"></script>
+    <style type="text/css">
+        .CodeMirror {border: 2px solid #A0A0A0;}
+    </style>
+</html>
