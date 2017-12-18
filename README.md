@@ -9,7 +9,7 @@ $ make docker
 $ docker run -p 5000 donachys/kubevalonline:latest
 ```
 
-use docker ps to see which port 5000 was mapped to and then open your browser to localhost:<portnum>
+use docker ps to see which port 5000 was mapped to and then open your browser to `localhost:mappedport`
 
 
 
