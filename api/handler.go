@@ -14,7 +14,6 @@ import (
 
 func Handler() *mux.Router {
 	r := router.API()
-	// r.PathPrefix("/api/").Handler(http.StripPrefix("/api/", r))
 	r.Get(router.Validate).HandlerFunc(val)
 	return r
 }
@@ -25,8 +24,6 @@ func val(rw http.ResponseWriter, req *http.Request) {
 	if err != nil {
 		rw.WriteHeader(http.StatusInternalServerError)
 		rw.Write([]byte(fmt.Sprint("500 - internal server error")))
-	} else {
-		// log.Println("received req body: ", string(body))
 	}
 	results, err := kubeval.Validate(body, "")
 	if err != nil {

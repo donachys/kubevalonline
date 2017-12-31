@@ -28,11 +28,7 @@ func Start() {
 	m := http.NewServeMux()
 	m.Handle("/api/", http.StripPrefix("/api", api.Handler()))
 	m.Handle("/", app.Handler())
-	// router := mux.NewRouter().StrictSlash(true)
-	// router.Handle("/api/", http.StripPrefix("/api", api.Handler()))
-	// router.Handle("/", app.Handler())
-	// api.Handler(router)
-	// app.Handler(router)
+
 	log.Print("Listening on ", *httpAddr)
 	httpServer := &http.Server{
 		Addr:         *httpAddr,

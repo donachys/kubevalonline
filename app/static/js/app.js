@@ -13,7 +13,6 @@ clearBtn.addEventListener('click', function() {
     editor.setValue("")
 });
 btn.addEventListener('click', function() {
-    // console.log(editor.getValue());
     while (result.firstChild) {
         result.removeChild(result.firstChild);
     }
@@ -34,32 +33,3 @@ btn.addEventListener('click', function() {
         });
     }
 });
-
-
-// var request = new XMLHttpRequest();
-
-// request.onreadystatechange = function() {
-//     if(request.readyState === 4) {
-//         if(request.status === 200) {
-//             //  result = request.responseText;
-//             var node = document.createElement("pre");
-//             var textnode = document.createTextNode(request.responseText);
-//             node.appendChild(textnode);
-//             result.appendChild(node);
-//             request = new XMLHttpRequest();
-//             request.open('POST', "/api/val");
-//             result.style.display = "block";
-//         } else {
-//             result = "server unreachable."
-//             request = new XMLHttpRequest();
-//             request.open('POST', "/api/val");
-//             result.style.display = "block";
-//         }
-//     }
-// }
-// request.open('POST', "/api/val");
-
-// btn.addEventListener('click', function() {
-//     console.log(editor.getValue());
-//     request.send();
-// });
