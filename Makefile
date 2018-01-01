@@ -6,6 +6,10 @@ TAG=0.0.0# $$(git describe --abbrev=0 --tags)
 
 clean:
 	rm -rf bin
+test:
+	go test -timeout 30s -cover \
+	github.com/donachys/kubevalonline/api \
+	github.com/donachys/kubevalonline/app
 vendor:
 	echo "vendor..."
 	dep ensure

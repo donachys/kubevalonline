@@ -55,13 +55,21 @@ func val(rw http.ResponseWriter, req *http.Request) {
 }
 
 type ResponseElement struct {
-	Kind    string
-	Success bool
-	Errors  []string
+	Kind    string   `json:"kind,omitempty"`
+	Success bool     `json:"success,omitempty"`
+	Errors  []string `json:"errors,omitempty"`
 }
 type ResultsResponse struct {
-	Results []ResponseElement
+	Results []ResponseElement `json:"results,omitempty"`
 }
+
+// type ResultsResponse struct {
+// 	Results []struct {
+// 		Kind    string   `json:"kind,omitempty"`
+// 		Success bool     `json:"success,omitempty"`
+// 		Errors  []string `json:"errors,omitempty"`
+// 	} `json:"results,omitempty"`
+// }
 
 func buildResultsResponse(results []kubeval.ValidationResult, success bool) []ResponseElement {
 	r := len(results)
